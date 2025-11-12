@@ -23,12 +23,12 @@ mindweekly.app/
 │   ├── daily-rings.png
 │   ├── goal-setting.png
 │   ├── journaling.png
-│   ├── mood-tags.png
 │   ├── ai-reflection.png
 │   ├── statistics.png
 │   └── widgets.png
 ├── setup-screenshots.sh        # Helper script for screenshots
 ├── screenshots-instructions.md # Detailed screenshot setup guide
+├── firebase-setup.md           # Firebase Analytics setup guide
 └── README.md                   # This file
 ```
 
@@ -91,6 +91,38 @@ The landing page includes a beautiful screenshots gallery section. To add your r
    - File size: Optimize for web (< 500KB per image recommended)
 
 The gallery will automatically display your screenshots with captions and hover effects. Pro features are highlighted with a special badge.
+
+## Firebase Analytics Setup
+
+The landing page includes Firebase Analytics integration for tracking visitors and engagement.
+
+### Quick Setup
+
+1. **Create a Firebase project** at [Firebase Console](https://console.firebase.google.com/)
+2. **Register your web app** and get your config
+3. **Update `index.html`** with your Firebase config (around line 38)
+4. **Replace** the placeholder values:
+   ```javascript
+   const firebaseConfig = {
+       apiKey: "YOUR_API_KEY",           // ← Replace these
+       authDomain: "YOUR_PROJECT.firebaseapp.com",
+       projectId: "YOUR_PROJECT",
+       // ... etc
+   };
+   ```
+
+### What's Tracked
+
+Out of the box, the site tracks:
+- **Page views** - Every visitor
+- **App Store clicks** - When users click download buttons
+- **Click locations** - Which section the button was in
+
+See `firebase-setup.md` for detailed setup instructions.
+
+### Privacy
+
+Firebase Analytics is GDPR-compliant and free. IP addresses are anonymized by default.
 
 ## Customization
 
