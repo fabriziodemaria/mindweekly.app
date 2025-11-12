@@ -1,0 +1,11 @@
+# Rename this file to CNAME (without .example) and add your custom domain
+# Example: mindweekly.app
+# 
+# After renaming:
+# 1. Add this domain in your GitHub Pages settings
+# 2. Configure your DNS provider to point to GitHub Pages
+#    - Add a CNAME record pointing to: [username].github.io
+#    - Or add A records pointing to GitHub Pages IPs
+# 
+# More info: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
