@@ -192,5 +192,5 @@ href="https://apps.apple.com/se/app/mind-weekly/id6753870098"
 
 ## Contact
 
-For questions or support, contact: fabrizio.f.demaria@gmail.com
+For questions or support: fabrizio.f.demaria@gmail.com
 
