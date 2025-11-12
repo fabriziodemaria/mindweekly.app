@@ -9,10 +9,12 @@
   <!-- Background circle -->
   <circle cx="50" cy="50" r="48" fill="url(#grad1)"/>
   
-  <!-- Activity rings -->
-  <circle cx="50" cy="50" r="32" fill="none" stroke="#FF2D55" stroke-width="4" stroke-dasharray="180 20" opacity="0.9"/>
-  <circle cx="50" cy="50" r="24" fill="none" stroke="#34C759" stroke-width="4" stroke-dasharray="140 10" opacity="0.9"/>
-  <circle cx="50" cy="50" r="16" fill="none" stroke="#007AFF" stroke-width="4" stroke-dasharray="90 10" opacity="0.9"/>
+  <!-- Activity rings - 5 rings matching Mind Weekly app -->
+  <circle cx="50" cy="50" r="36" fill="none" stroke="#FFD60A" stroke-width="3" stroke-dasharray="200 25" opacity="0.9"/>
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#FF9F0A" stroke-width="3" stroke-dasharray="160 20" opacity="0.9"/>
+  <circle cx="50" cy="50" r="24" fill="none" stroke="#34C759" stroke-width="3" stroke-dasharray="130 15" opacity="0.9"/>
+  <circle cx="50" cy="50" r="18" fill="none" stroke="#5AC8FA" stroke-width="3" stroke-dasharray="100 10" opacity="0.9"/>
+  <circle cx="50" cy="50" r="12" fill="none" stroke="#007AFF" stroke-width="3" stroke-dasharray="70 5" opacity="0.9"/>
   
   <!-- Center dot -->
   <circle cx="50" cy="50" r="6" fill="white" opacity="0.9"/>

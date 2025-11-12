@@ -80,6 +80,19 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
     font-size: 1.5rem;
     font-weight: 700;
     background: var(--gradient-hero);
@@ -227,30 +240,45 @@ body {
 
 .ring {
     fill: none;
-    stroke-width: 12;
+    stroke-width: 10;
     stroke-linecap: round;
     opacity: 0.9;
 }
 
+/* Ring colors matching the Mind Weekly app */
 .ring-1 {
-    stroke: #FF2D55;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 100;
-    animation: fillRing 2s ease-in-out infinite alternate;
+    stroke: #FFD60A; /* Yellow - Daylight */
+    stroke-dasharray: 500;
+    stroke-dashoffset: 120;
+    animation: fillRing 2.5s ease-in-out infinite alternate;
 }
 
 .ring-2 {
-    stroke: #34C759;
-    stroke-dasharray: 360;
-    stroke-dashoffset: 80;
-    animation: fillRing 2s ease-in-out 0.5s infinite alternate;
+    stroke: #FF9F0A; /* Orange - Mindfulness */
+    stroke-dasharray: 420;
+    stroke-dashoffset: 95;
+    animation: fillRing 2.5s ease-in-out 0.4s infinite alternate;
 }
 
 .ring-3 {
-    stroke: #007AFF;
+    stroke: #34C759; /* Green - Exercise */
+    stroke-dasharray: 350;
+    stroke-dashoffset: 75;
+    animation: fillRing 2.5s ease-in-out 0.8s infinite alternate;
+}
+
+.ring-4 {
+    stroke: #5AC8FA; /* Cyan - Awareness */
     stroke-dasharray: 280;
     stroke-dashoffset: 60;
-    animation: fillRing 2s ease-in-out 1s infinite alternate;
+    animation: fillRing 2.5s ease-in-out 1.2s infinite alternate;
+}
+
+.ring-5 {
+    stroke: #007AFF; /* Blue - Sleep */
+    stroke-dasharray: 200;
+    stroke-dashoffset: 40;
+    animation: fillRing 2.5s ease-in-out 1.6s infinite alternate;
 }
 
 @keyframes fillRing {
@@ -485,30 +513,45 @@ body {
 
 .display-ring {
     fill: none;
-    stroke-width: 18;
+    stroke-width: 16;
     stroke-linecap: round;
     opacity: 0.9;
 }
 
+/* Display ring colors matching the Mind Weekly app */
 .display-ring.ring-1 {
-    stroke: #FF2D55;
-    stroke-dasharray: 660;
-    stroke-dashoffset: 150;
+    stroke: #FFD60A; /* Yellow - Daylight */
+    stroke-dasharray: 750;
+    stroke-dashoffset: 180;
     animation: fillDisplayRing 3s ease-in-out infinite alternate;
 }
 
 .display-ring.ring-2 {
-    stroke: #34C759;
-    stroke-dasharray: 530;
-    stroke-dashoffset: 120;
-    animation: fillDisplayRing 3s ease-in-out 0.5s infinite alternate;
+    stroke: #FF9F0A; /* Orange - Mindfulness */
+    stroke-dasharray: 640;
+    stroke-dashoffset: 140;
+    animation: fillDisplayRing 3s ease-in-out 0.4s infinite alternate;
 }
 
 .display-ring.ring-3 {
-    stroke: #007AFF;
-    stroke-dasharray: 400;
-    stroke-dashoffset: 90;
-    animation: fillDisplayRing 3s ease-in-out 1s infinite alternate;
+    stroke: #34C759; /* Green - Exercise */
+    stroke-dasharray: 530;
+    stroke-dashoffset: 110;
+    animation: fillDisplayRing 3s ease-in-out 0.8s infinite alternate;
+}
+
+.display-ring.ring-4 {
+    stroke: #5AC8FA; /* Cyan - Awareness */
+    stroke-dasharray: 420;
+    stroke-dashoffset: 85;
+    animation: fillDisplayRing 3s ease-in-out 1.2s infinite alternate;
+}
+
+.display-ring.ring-5 {
+    stroke: #007AFF; /* Blue - Sleep */
+    stroke-dasharray: 300;
+    stroke-dashoffset: 60;
+    animation: fillDisplayRing 3s ease-in-out 1.6s infinite alternate;
 }
 
 @keyframes fillDisplayRing {
@@ -575,20 +618,76 @@ body {
 }
 
 .journal-entry {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--bg-subtle);
+}
+
+.entry-time {
+    font-weight: 600;
+    color: var(--primary-purple);
+    font-size: 1rem;
 }
 
 .entry-date {
-    font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.gratitude-section {
     margin-bottom: var(--spacing-md);
-    font-size: 1.1rem;
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, rgba(255, 214, 10, 0.08) 0%, rgba(255, 159, 10, 0.08) 100%);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid #FFD60A;
+}
+
+.gratitude-section h4 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.gratitude-item {
+    padding: var(--spacing-xs) 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.mood-section {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mood-section h4 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.influences-hint {
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--bg-subtle);
+}
+
+.influences-hint small {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    font-style: italic;
 }
 
 .mood-selector {
     display: flex;
     gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
     padding: var(--spacing-sm);
     background: var(--bg-subtle);
     border-radius: var(--radius-sm);
@@ -613,15 +712,6 @@ body {
     opacity: 1;
     background: white;
     box-shadow: var(--shadow-sm);
-}
-
-.entry-text {
-    padding: var(--spacing-md);
-    background: var(--bg-subtle);
-    border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-    line-height: 1.7;
-    min-height: 150px;
 }
 
 .journaling-feature {
@@ -1123,6 +1213,15 @@ body {
     .screenshots-gallery {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
     }
 }
 
